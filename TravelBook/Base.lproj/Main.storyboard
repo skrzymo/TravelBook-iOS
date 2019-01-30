@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Authentication Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController restorationIdentifier="Authentication" storyboardIdentifier="Authentication" id="BYZ-38-t0r" customClass="AuthenticationController" customModule="TravelBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Bz-Vi-NRj" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="16" y="363" width="343" height="30"/>
+                                <state key="normal" title="Kontynuuj za pośrednictwem Facebooka"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TravelBook" translatesAutoresizingMaskIntoConstraints="NO" id="WiE-SR-HTp">
+                                <rect key="frame" x="60" y="91" width="255" height="255"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="255" id="2Ug-df-8vZ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Bz-Vi-NRj" firstAttribute="centerX" secondItem="WiE-SR-HTp" secondAttribute="centerX" id="5AZ-jV-KnO"/>
+                            <constraint firstItem="WiE-SR-HTp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="27" id="XAD-BO-U0A"/>
+                            <constraint firstItem="WiE-SR-HTp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="aEL-Kp-gKf"/>
+                            <constraint firstItem="6Bz-Vi-NRj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="brh-F7-L08"/>
+                            <constraint firstItem="6Bz-Vi-NRj" firstAttribute="top" secondItem="WiE-SR-HTp" secondAttribute="bottom" constant="17" id="cG0-fM-YDe"/>
+                            <constraint firstItem="6Bz-Vi-NRj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fev-l5-8kU"/>
+                            <constraint firstItem="6Bz-Vi-NRj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="qBl-Xl-BgE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="facebookLoginButton" destination="6Bz-Vi-NRj" id="DIz-wi-mS0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10.4" y="87.706146926536732"/>
+        </scene>
+        <!--TravelBook-->
+        <scene sceneID="nAK-St-b3l">
+            <objects>
+                <viewController id="qIY-Oh-WPh" customClass="ListViewController" customModule="TravelBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K5q-V6-lWX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEt-Lu-VRz">
+                                <rect key="frame" x="0.0" y="64" width="375" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HwR-ZX-hb1">
+                                <rect key="frame" x="0.0" y="86" width="375" height="581"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XEt-Lu-VRz" firstAttribute="trailing" secondItem="HwR-ZX-hb1" secondAttribute="trailing" id="6qo-zo-Goa"/>
+                            <constraint firstAttribute="trailing" secondItem="XEt-Lu-VRz" secondAttribute="trailing" id="7vz-kI-BIQ"/>
+                            <constraint firstItem="XEt-Lu-VRz" firstAttribute="leading" secondItem="K5q-V6-lWX" secondAttribute="leading" id="M56-bT-CRP"/>
+                            <constraint firstItem="HwR-ZX-hb1" firstAttribute="top" secondItem="XEt-Lu-VRz" secondAttribute="bottom" constant="1" id="roB-JP-paa"/>
+                            <constraint firstItem="XEt-Lu-VRz" firstAttribute="top" secondItem="ud4-SL-XdP" secondAttribute="top" id="tpA-PX-EdD"/>
+                            <constraint firstItem="HwR-ZX-hb1" firstAttribute="leading" secondItem="XEt-Lu-VRz" secondAttribute="leading" id="ueg-6Y-RDo"/>
+                            <constraint firstItem="HwR-ZX-hb1" firstAttribute="bottom" secondItem="ud4-SL-XdP" secondAttribute="bottom" id="xad-8c-xSi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ud4-SL-XdP"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="TravelBook" id="Q8w-Pa-VPT">
+                        <barButtonItem key="leftBarButtonItem" title="Wyloguj" id="t52-fc-KxJ">
+                            <connections>
+                                <action selector="logoutAction:" destination="qIY-Oh-WPh" id="AMa-Ht-ICc"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="logout" id="5GY-bx-k7V"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="trash" id="fl8-nd-ofy">
+                                <connections>
+                                    <action selector="deletePlaceAction:" destination="qIY-Oh-WPh" id="Wr6-9g-plc"/>
+                                    <segue destination="w3x-Gq-f9T" kind="show" identifier="deletePlace" id="8z9-rW-xgF"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="add" id="ljc-wb-1dp">
+                                <connections>
+                                    <action selector="addPlaceAction:" destination="qIY-Oh-WPh" id="G3K-o6-NpF"/>
+                                    <segue destination="0cP-S7-EJu" kind="show" identifier="addPlace" id="bRF-vl-A02"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addPlaceButton" destination="ljc-wb-1dp" id="Sle-nJ-PAM"/>
+                        <outlet property="deletePlaceButton" destination="fl8-nd-ofy" id="n4p-gV-GyG"/>
+                        <outlet property="logoutButton" destination="t52-fc-KxJ" id="eSb-tT-e84"/>
+                        <outlet property="nameLabel" destination="XEt-Lu-VRz" id="DjW-to-Ett"/>
+                        <outlet property="tableView" destination="HwR-ZX-hb1" id="xZe-Cg-gay"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sxk-tH-Uf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1895.2" y="-10.344827586206897"/>
+        </scene>
+        <!--Delete Controller-->
+        <scene sceneID="dMV-SI-154">
+            <objects>
+                <viewController id="X9p-vb-NvE" customClass="DeleteController" customModule="TravelBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M2T-i8-CP9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lCS-Pp-lda">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="JA6-Kl-hA1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sVn-2p-TEw">
+                        <barButtonItem key="leftBarButtonItem" title="Cofnij" id="rc6-Kl-Rrt">
+                            <connections>
+                                <action selector="backButtonAction:" destination="X9p-vb-NvE" id="Lqf-rw-j0h"/>
+                                <segue destination="Cz7-Ve-aGX" kind="show" identifier="backAfterDelete" id="Wks-NO-Czs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backButton" destination="rc6-Kl-Rrt" id="Ew4-48-TdR"/>
+                        <outlet property="tableView" destination="lCS-Pp-lda" id="a4l-2m-P62"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ldS-d0-IPz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3847.1999999999998" y="239.73013493253376"/>
+        </scene>
+        <!--Adres-->
+        <scene sceneID="gB4-to-VwI">
+            <objects>
+                <viewController id="D7S-La-nsI" customClass="MapsController" customModule="TravelBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zaJ-pO-1hz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="FOK-Pp-C3d"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Adres" id="CBx-Yg-LiC">
+                        <barButtonItem key="leftBarButtonItem" title="Cofnij" id="cb7-WP-uyR">
+                            <connections>
+                                <action selector="backButtonAction:" destination="D7S-La-nsI" id="YT6-te-GKs"/>
+                                <segue destination="Cz7-Ve-aGX" kind="show" identifier="goBackToListView" id="hOV-Ll-pCa"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="search" id="Wto-1x-DE2">
+                                <connections>
+                                    <action selector="autoCompleteClicked:" destination="D7S-La-nsI" id="BN1-mF-uIO"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="add" id="2ho-50-kA7">
+                                <connections>
+                                    <action selector="addButtonClicked:" destination="D7S-La-nsI" id="jTX-zJ-wCC"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backButton" destination="cb7-WP-uyR" id="kFV-fU-94N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bd6-o4-v78" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3864.8000000000002" y="-534.78260869565224"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eVe-MF-C5n">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0cP-S7-EJu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1bH-Wj-Vxy">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="D7S-La-nsI" kind="relationship" relationship="rootViewController" id="TYj-Hx-06k"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Ny-BG-r11" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2892" y="-533.88305847076469"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gYc-PA-phf">
+            <objects>
+                <navigationController restorationIdentifier="NavigateToList" storyboardIdentifier="NavigateToList" automaticallyAdjustsScrollViewInsets="NO" id="Cz7-Ve-aGX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ncw-ye-4b0">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qIY-Oh-WPh" kind="relationship" relationship="rootViewController" id="mcY-fZ-gw0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JPv-q2-TXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="956" y="-10.344827586206897"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1ql-Q6-thz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="w3x-Gq-f9T" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g43-cV-EEc">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="X9p-vb-NvE" kind="relationship" relationship="rootViewController" id="TnF-RO-qNW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f8I-zQ-rfl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2908" y="239.73013493253376"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TravelBook" width="600" height="600"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Wks-NO-Czs"/>
+    </inferredMetricsTieBreakers>
+</document>
